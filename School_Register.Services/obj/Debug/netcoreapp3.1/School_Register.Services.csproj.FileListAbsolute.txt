@@ -1,0 +1,10 @@
+C:\Users\martu\source\repos\School Register\School_Register.Services\bin\Debug\netcoreapp3.1\School_Register.Services.deps.json
+C:\Users\martu\source\repos\School Register\School_Register.Services\bin\Debug\netcoreapp3.1\School_Register.Services.dll
+C:\Users\martu\source\repos\School Register\School_Register.Services\bin\Debug\netcoreapp3.1\School_Register.Services.pdb
+C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.csproj.AssemblyReference.cache
+C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.AssemblyInfoInputs.cache
+C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.AssemblyInfo.cs
+C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.csproj.CoreCompileInputs.cache
+C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.dll
+C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.pdb

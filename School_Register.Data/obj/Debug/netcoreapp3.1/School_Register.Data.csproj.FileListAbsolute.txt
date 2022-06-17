@@ -1,0 +1,16 @@
+C:\Users\martu\source\repos\School Register\School_Register.Data\bin\Debug\netcoreapp3.1\School_Register.Data.deps.json
+C:\Users\martu\source\repos\School Register\School_Register.Data\bin\Debug\netcoreapp3.1\School_Register.Data.runtimeconfig.json
+C:\Users\martu\source\repos\School Register\School_Register.Data\bin\Debug\netcoreapp3.1\School_Register.Data.runtimeconfig.dev.json
+C:\Users\martu\source\repos\School Register\School_Register.Data\bin\Debug\netcoreapp3.1\School_Register.Data.dll
+C:\Users\martu\source\repos\School Register\School_Register.Data\bin\Debug\netcoreapp3.1\School_Register.Data.pdb
+C:\Users\martu\source\repos\School Register\School_Register.Data\bin\Debug\netcoreapp3.1\School_Register.Data.Models.dll
+C:\Users\martu\source\repos\School Register\School_Register.Data\bin\Debug\netcoreapp3.1\School_Register.Data.Models.pdb
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.csproj.AssemblyReference.cache
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.AssemblyInfoInputs.cache
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.AssemblyInfo.cs
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.csproj.CoreCompileInputs.cache
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.csproj.CopyComplete
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.dll
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.pdb
+C:\Users\martu\source\repos\School Register\School_Register.Data\obj\Debug\netcoreapp3.1\School_Register.Data.genruntimeconfig.cache

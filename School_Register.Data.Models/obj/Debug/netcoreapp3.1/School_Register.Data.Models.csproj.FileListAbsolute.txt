@@ -1,0 +1,10 @@
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\bin\Debug\netcoreapp3.1\School_Register.Data.Models.deps.json
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\bin\Debug\netcoreapp3.1\School_Register.Data.Models.dll
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\bin\Debug\netcoreapp3.1\School_Register.Data.Models.pdb
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\obj\Debug\netcoreapp3.1\School_Register.Data.Models.csproj.AssemblyReference.cache
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\obj\Debug\netcoreapp3.1\School_Register.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\obj\Debug\netcoreapp3.1\School_Register.Data.Models.AssemblyInfoInputs.cache
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\obj\Debug\netcoreapp3.1\School_Register.Data.Models.AssemblyInfo.cs
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\obj\Debug\netcoreapp3.1\School_Register.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\obj\Debug\netcoreapp3.1\School_Register.Data.Models.dll
+C:\Users\martu\source\repos\School Register\School_Register.Data.Models\obj\Debug\netcoreapp3.1\School_Register.Data.Models.pdb
