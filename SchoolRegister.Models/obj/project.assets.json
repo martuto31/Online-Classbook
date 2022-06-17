@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Models\\SchoolRegister.Data.Models.csproj",
-      "projectName": "SchoolRegister.Data.Models",
-      "projectPath": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Models\\SchoolRegister.Data.Models.csproj",
+      "projectUniqueName": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Models\\School_Register.Data.Models.csproj",
+      "projectName": "School_Register.Data.Models",
+      "projectPath": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Models\\School_Register.Data.Models.csproj",
       "packagesPath": "C:\\Users\\martu\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Models\\obj\\",
       "projectStyle": "PackageReference",

@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Services\\SchoolRegister.Services.csproj",
-      "projectName": "SchoolRegister.Services",
-      "projectPath": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Services\\SchoolRegister.Services.csproj",
+      "projectUniqueName": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Services\\School_Register.Services.csproj",
+      "projectName": "School_Register.Services",
+      "projectPath": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Services\\School_Register.Services.csproj",
       "packagesPath": "C:\\Users\\martu\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Services\\obj\\",
       "projectStyle": "PackageReference",

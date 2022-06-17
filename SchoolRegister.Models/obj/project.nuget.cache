@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QBQ4BikjpEioygn/eRtqFeKNMKAmFjlzHhlIa+IkgqnkplF+fivHK4Eg+oWJbxfVCs2MkHCDKuKaj+Yv9nRoHg==",
+  "dgSpecHash": "JUphxi1R/5twmXYbdNC0swg7xMmLFUYbOVPv/e9ERvwu8vsjUhqaRHZuDskv5kPDgctATtDIOapaKEj0C8YwvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Models\\SchoolRegister.Data.Models.csproj",
+  "projectFilePath": "C:\\Users\\martu\\source\\repos\\School Register\\SchoolRegister.Models\\School_Register.Data.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
