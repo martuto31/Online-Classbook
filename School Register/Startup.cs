@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using School_Register.Data;
 using Microsoft.EntityFrameworkCore;
+using School_Register.Data.Repositories;
 
 namespace School_Register
 {
@@ -24,6 +25,8 @@ namespace School_Register
                 options => options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddRazorPages();
+
+            services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
