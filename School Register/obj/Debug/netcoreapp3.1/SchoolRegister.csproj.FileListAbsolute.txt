@@ -85,3 +85,5 @@ C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp
 C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\SchoolRegister.genruntimeconfig.cache
 C:\Users\martu\source\repos\School Register\School Register\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\martu\source\repos\School Register\School Register\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs

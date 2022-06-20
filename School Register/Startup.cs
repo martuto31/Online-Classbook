@@ -27,6 +27,8 @@ namespace School_Register
             services.AddRazorPages();
 
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+
+            services.AddSingleton(this.Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +54,7 @@ namespace School_Register
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
