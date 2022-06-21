@@ -8,3 +8,8 @@ C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\n
 C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.csproj.CoreCompileInputs.cache
 C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.dll
 C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.pdb
+C:\Users\martu\source\repos\School Register\School_Register.Services\bin\Debug\netcoreapp3.1\School_Register.Data.dll
+C:\Users\martu\source\repos\School Register\School_Register.Services\bin\Debug\netcoreapp3.1\School_Register.Data.Models.dll
+C:\Users\martu\source\repos\School Register\School_Register.Services\bin\Debug\netcoreapp3.1\School_Register.Data.pdb
+C:\Users\martu\source\repos\School Register\School_Register.Services\bin\Debug\netcoreapp3.1\School_Register.Data.Models.pdb
+C:\Users\martu\source\repos\School Register\School_Register.Services\obj\Debug\netcoreapp3.1\School_Register.Services.csproj.CopyComplete

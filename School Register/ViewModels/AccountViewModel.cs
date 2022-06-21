@@ -19,6 +19,8 @@ namespace School_Register.ViewModels
 
         public int Age { get; set; }
 
+        public int Grade { get; set; }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -26,5 +28,7 @@ namespace School_Register.ViewModels
         public int ClassNumber { get; set; }
 
         public int StudentNumber { get; set; }
+
+        public AccountType AccountType { get; set; }
     }
 }

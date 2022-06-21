@@ -1416,6 +1416,9 @@
         }
       },
       "School_Register.Services/1.0.0": {
+        "dependencies": {
+          "School_Register.Data": "1.0.0"
+        },
         "runtime": {
           "School_Register.Services.dll": {}
         },

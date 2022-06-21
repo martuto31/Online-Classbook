@@ -6,6 +6,9 @@ using Microsoft.Extensions.Hosting;
 using School_Register.Data;
 using Microsoft.EntityFrameworkCore;
 using School_Register.Data.Repositories;
+using System;
+using School_Register.Data.Models;
+using School_Register.Services.Account;
 
 namespace School_Register
 {
@@ -27,8 +30,16 @@ namespace School_Register
             services.AddRazorPages();
 
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-
             services.AddSingleton(this.Configuration);
+            services.AddScoped<IStudentAccountService, StudentAccountService>();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+                
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

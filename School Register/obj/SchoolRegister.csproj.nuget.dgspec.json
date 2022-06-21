@@ -254,7 +254,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\martu\\source\\repos\\School Register\\School_Register.Data\\School_Register.Data.csproj": {
+                "projectPath": "C:\\Users\\martu\\source\\repos\\School Register\\School_Register.Data\\School_Register.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

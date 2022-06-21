@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using School_Register.Data.Models;
 using School_Register.Data.Repositories;
+using School_Register.Services.Account;
 using School_Register.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -13,14 +15,17 @@ namespace School_Register.Controllers
     {
         private readonly IRepository<StudentAccount> studentAccRepo;
         private readonly IRepository<TeacherAccount> teacherAccRepo;
+        private readonly IStudentAccountService studentAccService;
 
         public HomeController(
             IRepository<StudentAccount> studentAccRepo,
-            IRepository<TeacherAccount> teacherAccRepo
+            IRepository<TeacherAccount> teacherAccRepo,
+            IStudentAccountService studentAccService
             )
         {
             this.studentAccRepo = studentAccRepo;
             this.teacherAccRepo = teacherAccRepo;
+            this.studentAccService = studentAccService;
         }
         public IActionResult Index()
         {
@@ -38,15 +43,48 @@ namespace School_Register.Controllers
 
         //}
 
-        public IActionResult Register()
-        {
-            var model = new AccountViewModel();
-            return this.View(model);
-        }
-
-        //public async Task<IActionResult> RegisterAsync()
+        //public IActionResult Register()
         //{
-
+        //    var model = new AccountViewModel();
+        //    return this.View(model);
         //}
+
+        public async Task<IActionResult> RegisterAsync(AccountViewModel acc)
+        {
+            if(acc.AccountType == AccountType.Student)
+            {
+                if(!this.studentAccService.CheckIfAccountExists(acc.Username))
+                {
+                    var newAcc = new StudentAccount()
+                    {
+                        Username = acc.Username,
+                        Password = acc.Password,
+                        ConfirmPassword = acc.ConfirmPassword,
+                        ClassNumber = acc.ClassNumber,
+                        Email = acc.Email,
+                        FirstName = acc.FirstName,
+                        LastName = acc.LastName,
+                        Grade = acc.Grade,
+                        StudentNumber = acc.StudentNumber,
+                    };
+
+                    await this.studentAccRepo.AddAsync(newAcc);
+                    await this.studentAccRepo.SaveChangesAsync();
+                    this.HttpContext.Session.SetString("username", newAcc.Username);
+                    return this.RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    this.ModelState.AddModelError(string.Empty, "Потребителското име вече е заето");
+
+                    return this.View();
+                }
+            }
+            else if (acc.AccountType == AccountType.Teacher)
+            {
+                return this.View();
+            }
+            return this.View();
+        }
     }
 }
