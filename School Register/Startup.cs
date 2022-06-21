@@ -32,6 +32,7 @@ namespace School_Register
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddSingleton(this.Configuration);
             services.AddScoped<IStudentAccountService, StudentAccountService>();
+            services.AddScoped<ITeacherAccountService, TeacherAccountService>();
 
             services.AddSession(options =>
             {
