@@ -29,33 +29,43 @@ namespace School_Register.Controllers
             return View();
         }
 
-        //public IActionResult Login()
-        //{
-        //    var model = new AccountViewModel();
-        //    return this.View(model);
-        //}
+        public IActionResult Login()
+        {
+            var model = new AccountViewModel();
+            return this.View(model);
+        }
 
-        //[AutoValidateAntiforgeryToken]
-        //[HttpPost]
-        //public async Task<IActionResult> LoginAsync(string username, string password)
-        //{
-        //    if(this.accService.CheckIfAccountExists(username))
-        //    {
-        //        var
-        //    }
-        //    else
-        //    {
-        //        this.ModelState.AddModelError(string.Empty, "Грешно потребителското име или парола.");
+        [AutoValidateAntiforgeryToken]
+        [HttpPost]
+        public IActionResult Login(string username, string password)
+        {
+            if (this.accService.CheckIfAccountExists(username))
+            {
+                if(this.accService.isPasswordCorrect(username, password))
+                {
+                    this.HttpContext.Session.SetString("username", username);
+                    return this.RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    this.ModelState.AddModelError(string.Empty, "Грешно потребителското име или парола.");
 
-        //        return this.View();
-        //    }
-        //}
+                    return this.View();
+                }
+            }
+            else
+            {
+                this.ModelState.AddModelError(string.Empty, "Грешно потребителското име или парола.");
 
-        //public IActionResult Register()
-        //{
-        //    var model = new AccountViewModel();
-        //    return this.View(model);
-        //}
+                return this.View();
+            }
+        }
+
+        public IActionResult Register()
+        {
+            var model = new AccountViewModel();
+            return this.View(model);
+        }
 
         [AutoValidateAntiforgeryToken]
         [HttpPost]
