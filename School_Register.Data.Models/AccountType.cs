@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace School_Register.ViewModels
+namespace School_Register.Data.Models
 {
     public enum AccountType
     {

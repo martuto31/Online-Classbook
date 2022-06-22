@@ -10,11 +10,8 @@ namespace School_Register.Data.Models
         [Key]
         public int Id { get; set; }
         public int Evaluation { get; set; }
-        public StudentAccount StudentAccount { get; set; }
-
+        public Account StudentAccount { get; set; }
         public SubjectEnum Subject { get; set; }
-
-
 
         public string Message { get; set; }
     }

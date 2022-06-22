@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using School_Register.Data.Models;
 using School_Register.Data.Repositories;
-using School_Register.Services.Account;
+using School_Register.Services.AccountServices;
 using School_Register.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -13,37 +13,32 @@ namespace School_Register.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IRepository<StudentAccount> studentAccRepo;
-        private readonly IRepository<TeacherAccount> teacherAccRepo;
-        private readonly IStudentAccountService studentAccService;
-        private readonly ITeacherAccountService teacherAccountService;
+        private readonly IRepository<Account> accRepo;
+        private readonly IAccountService accService;
 
         public HomeController(
-            IRepository<StudentAccount> studentAccRepo,
-            IRepository<TeacherAccount> teacherAccRepo,
-            IStudentAccountService studentAccService,
-            ITeacherAccountService teacherAccountService
+            IRepository<Account> accRepo,
+            IAccountService accService
             )
         {
-            this.studentAccRepo = studentAccRepo;
-            this.teacherAccRepo = teacherAccRepo;
-            this.studentAccService = studentAccService;
-            this.teacherAccountService = teacherAccountService;
+            this.accRepo = accRepo;
+            this.accService = accService;
         }
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Login()
-        {
-            var model = new AccountViewModel();
-            return this.View(model);
-        }
+        //public IActionResult Login()
+        //{
+        //    var model = new AccountViewModel();
+        //    return this.View(model);
+        //}
 
+        //[AutoValidateAntiforgeryToken]
+        //[HttpPost]
         //public async Task<IActionResult> LoginAsync()
         //{
-
         //}
 
         //public IActionResult Register()
@@ -52,64 +47,36 @@ namespace School_Register.Controllers
         //    return this.View(model);
         //}
 
+        [AutoValidateAntiforgeryToken]
+        [HttpPost]
         public async Task<IActionResult> RegisterAsync(AccountViewModel acc)
         {
-            if(acc.AccountType == AccountType.Student)
+            if (!this.accService.CheckIfAccountExists(acc.Username))
             {
-                if(!this.studentAccService.CheckIfAccountExists(acc.Username))
+                var newAcc = new Account()
                 {
-                    var newAcc = new StudentAccount()
-                    {
-                        Username = acc.Username,
-                        Password = acc.Password,
-                        ConfirmPassword = acc.ConfirmPassword,
-                        ClassNumber = acc.ClassNumber,
-                        Email = acc.Email,
-                        FirstName = acc.FirstName,
-                        LastName = acc.LastName,
-                        Grade = acc.Grade,
-                        StudentNumber = acc.StudentNumber,
-                    };
+                    Username = acc.Username,
+                    Password = acc.Password,
+                    ConfirmPassword = acc.ConfirmPassword,
+                    ClassNumber = acc.ClassNumber,
+                    Email = acc.Email,
+                    FirstName = acc.FirstName,
+                    LastName = acc.LastName,
+                    Grade = acc.Grade,
+                    StudentNumber = acc.StudentNumber,
+                };
 
-                    await this.studentAccRepo.AddAsync(newAcc);
-                    await this.studentAccRepo.SaveChangesAsync();
-                    this.HttpContext.Session.SetString("username", newAcc.Username);
-                    return this.RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    this.ModelState.AddModelError(string.Empty, "Потребителското име вече е заето");
-
-                    return this.View();
-                }
+                await this.accRepo.AddAsync(newAcc);
+                await this.accRepo.SaveChangesAsync();
+                this.HttpContext.Session.SetString("username", newAcc.Username);
+                return this.RedirectToAction("Index", "Home");
             }
-            else if (acc.AccountType == AccountType.Teacher)
+            else
             {
-                if(!this.teacherAccountService.CheckIfAccountExists(acc.Username))
-                {
-                    var newAcc = new TeacherAccount()
-                    {
-                        Username = acc.Username,
-                        Password = acc.Password,
-                        ConfirmPassword = acc.ConfirmPassword,
-                        Email = acc.Email,
-                        FirstName = acc.FirstName,
-                        LastName = acc.LastName,
-                    };
+                this.ModelState.AddModelError(string.Empty, "Потребителското име вече е заето");
 
-                    await this.teacherAccRepo.AddAsync(newAcc);
-                    await this.teacherAccRepo.SaveChangesAsync();
-                    this.HttpContext.Session.SetString("username", newAcc.Username);
-                    return this.RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    this.ModelState.AddModelError(string.Empty, "Потребителското име вече е заето");
-
-                    return this.View();
-                }
+                return this.View();
             }
-            return this.View();
         }
     }
 }

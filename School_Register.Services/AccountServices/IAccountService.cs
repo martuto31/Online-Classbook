@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace School_Register.Services.Account
+namespace School_Register.Services.AccountServices
 {
-    public interface ITeacherAccountService
+    public interface IAccountService
     {
         public bool CheckIfAccountExists(string username);
     }

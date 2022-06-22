@@ -16,12 +16,12 @@ namespace School_Register.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             // One to many relation - 1 Student account has many grades
-            builder.Entity<StudentAccount>()
+            builder.Entity<Account>()
                 .HasMany(c => c.Marks)
                 .WithOne(e => e.StudentAccount);
         }
 
-        public DbSet<StudentAccount> studentAccounts { get; set; }
+        public DbSet<Account> studentAccounts { get; set; }
 
         public DbSet<Mark> marks { get; set; }
     }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using School_Register.Data.Repositories;
 using System;
 using School_Register.Data.Models;
-using School_Register.Services.Account;
+using School_Register.Services.AccountServices;
 
 namespace School_Register
 {
@@ -31,8 +31,7 @@ namespace School_Register
 
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddSingleton(this.Configuration);
-            services.AddScoped<IStudentAccountService, StudentAccountService>();
-            services.AddScoped<ITeacherAccountService, TeacherAccountService>();
+            services.AddScoped<IAccountService, AccountService>();
 
             services.AddSession(options =>
             {

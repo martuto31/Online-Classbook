@@ -4,7 +4,7 @@ using System.Text;
 
 namespace School_Register.Data.Models
 {
-    public class StudentAccount : BaseAccount
+    public class Account : BaseAccount
     {
         public ICollection<Mark> Marks { get; set; }
 
@@ -13,5 +13,7 @@ namespace School_Register.Data.Models
         public int ClassNumber { get; set; }
         
         public int StudentNumber { get; set; }
+
+        public AccountType AccountType { get; set; }
     }
 }
