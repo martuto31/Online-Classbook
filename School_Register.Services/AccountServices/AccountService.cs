@@ -21,5 +21,21 @@ namespace School_Register.Services.AccountServices
             return this.accRepo.All()
                 .Any(a => a.Username == username);
         }
+
+        public Account GetAccount(string username)
+        {
+            return this.accRepo.All()
+                .FirstOrDefault(a => a.Username == username);
+        }
+
+        public bool isPasswordCorrect(string username, string password)
+        {
+            var acc = this.GetAccount(username);
+
+            if (acc.Password == password)
+                return true;
+            else
+                return false;
+        }
     }
 }

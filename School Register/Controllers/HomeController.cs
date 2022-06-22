@@ -37,8 +37,18 @@ namespace School_Register.Controllers
 
         //[AutoValidateAntiforgeryToken]
         //[HttpPost]
-        //public async Task<IActionResult> LoginAsync()
+        //public async Task<IActionResult> LoginAsync(string username, string password)
         //{
+        //    if(this.accService.CheckIfAccountExists(username))
+        //    {
+        //        var
+        //    }
+        //    else
+        //    {
+        //        this.ModelState.AddModelError(string.Empty, "Грешно потребителското име или парола.");
+
+        //        return this.View();
+        //    }
         //}
 
         //public IActionResult Register()
