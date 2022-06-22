@@ -61,6 +61,12 @@ namespace School_Register.Controllers
             }
         }
 
+        public IActionResult Logout()
+        {
+            this.HttpContext.Session.Remove("username");
+            return this.RedirectToAction("Login", "Home");
+        }
+
         public IActionResult Register()
         {
             var model = new AccountViewModel();

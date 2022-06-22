@@ -68,7 +68,6 @@ C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp
 C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\SchoolRegister.TagHelpers.input.cache
 C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\SchoolRegister.TagHelpers.output.cache
 C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\SchoolRegister.RazorCoreGenerate.cache
-C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\Razor\Views\Error.cshtml.g.cs
 C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\Razor\Views\Index.cshtml.g.cs
 C:\Users\martu\source\repos\School Register\School Register\obj\Debug\netcoreapp3.1\Razor\Views\Privacy.cshtml.g.cs

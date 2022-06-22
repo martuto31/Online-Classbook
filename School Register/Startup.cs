@@ -9,6 +9,8 @@ using School_Register.Data.Repositories;
 using System;
 using School_Register.Data.Models;
 using School_Register.Services.AccountServices;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Http;
 
 namespace School_Register
 {
@@ -30,8 +32,9 @@ namespace School_Register
             services.AddRazorPages();
 
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-            services.AddSingleton(this.Configuration);
             services.AddScoped<IAccountService, AccountService>();
+            services.AddSingleton(this.Configuration);
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddSession(options =>
             {
